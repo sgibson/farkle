@@ -1,0 +1,86 @@
+
+@import '_mixin';
+
+* {
+  box-sizing: border-box;
+}
+.Main {
+  text-align: center;
+  width: 100%;
+}
+
+.Main-inner {
+  margin: 0 auto;
+  width: 808px;
+  /* svg code */
+  background-color: #111;
+  @include bgSlantRight;
+}
+
+.Main-tray {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.Main-logo {
+  animation: Main-logo-spin 20s ease-in-out 2s infinite alternate-reverse;
+  margin-top: 10px;
+  height: 50px;
+  width: 50px;
+  scale: 0.5;
+}
+
+.logoContainer {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+@keyframes Main-logo-spin {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Main-header {
+  @include boxStyle();
+  background-color:rgba(50, 50, 50, 0.6);
+  color: #EEE;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: [col] 1fr [col] 1fr [col] 1fr;
+  grid-template-rows: [one] 40px [two] 15px [three] auto;
+  margin-top: 6px;
+}
+
+.Main-title {
+  font-size: 1.3em;
+  grid-column: 2;
+  grid-row: two;
+  justify-self: center;
+  white-space: nowrap;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.Main-subtitle {
+  font-size: 0.9em;
+  font-weight: normal;
+  grid-column: 2;
+  grid-row: three;
+  color: #666;
+  white-space: nowrap;
+  padding-top: 2px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+@media only screen and (max-width: 800px) {
+  .Main-inner, .Main-header {
+    width: 100%;
+  }
+  .Main-tray {
+    width: calc(100vw - 8px);
+  }
+}
+

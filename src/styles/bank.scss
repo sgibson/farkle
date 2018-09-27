@@ -1,0 +1,33 @@
+#divBankElement {
+	h1	{
+		color: #EEE;
+		font-family: 'Open Sans', sans;
+		font-size: 1.3em;
+		/* why do I have to set this???? */
+		-webkit-margin-before: 0;
+		-webkit-margin-after: 0;
+	}
+}
+
+#divBankGameOver {
+	color: #FF0000;
+	font-weight: bold;
+
+}
+
+@media only screen and (max-width: 580px)
+{
+	#divBankButtonElement,
+	#divBankElement {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	#divBankGameOver {
+		font-size: 0.8em;
+	}
+}
+

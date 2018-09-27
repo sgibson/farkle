@@ -1,0 +1,30 @@
+@import '_mixin';
+
+#divHowToPlay {
+	border: 2px solid #666;
+	border-radius: 4px;
+	h1 {
+		@include bgSlantLeft;
+		font-size: 1.6em;
+		text-indent: 15px;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		padding: 4px;
+		border: 2px solid #555;
+		border-radius: 4px;
+		/*background-color: rgba(70,70,70,0.5);*/
+
+		margin: 8px;
+		text-shadow: 1px 1px 3px black;
+	}
+}
+
+ol {
+	list-style-type: upper-alpha;
+}
+
+ol li {
+	line-height: 1.3em;
+	margin-bottom: 5px;
+}

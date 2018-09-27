@@ -1,0 +1,129 @@
+@import '_mixin';
+
+#divDiceController {
+	@include boxStyle;
+	display: flex;
+	flex-direction: column;
+	grid-area: diceController;
+	justify-content: center;
+	height: 490px;
+	width: 100%;
+	padding: 20px 0;
+}
+
+#divGameButton {
+	margin: 0 auto;
+}
+
+#divBankHeader,
+#divScoreHeader {
+	background-color: rgba(100, 100, 100, 0.4);
+	color: #888;
+	font-family: 'Open Sans';
+	font-size: 1em;
+	padding-top: 2px;
+	font-weight: bold;
+	vertical-align: middle;
+	height: 30px;
+	width: 100%;
+}
+
+#divBankHeader {
+	grid-area: bankHeader;
+}
+
+#divBank {
+	@include boxStyle();
+	display: grid;
+	grid-area: bankView;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 60px auto;
+	grid-template-rows: 60px auto;
+	grid-template-areas: "bankHeader bankHeader" "bankElement bankButton";
+	width: 100%;
+}
+
+#divBankElement {
+	grid-area: bankElement;
+	padding-top: 0px;
+	margin: 0 auto;
+	
+	h1 {
+		height: auto;
+		width: auto;
+	}
+}
+
+#divBankButtonElement {
+	margin: 0 auto;
+	color: #EEE;
+	width: 100%;
+}
+
+#divScoresheet {
+	@include boxStyle();
+	border-radius: 4px;
+	color: #EEE;
+	grid-area: scoresheet;
+	font-family: 'Kalam', cursive;
+	width: 100%;
+}
+
+#gridWrapper {
+	display: grid;
+	/*grid-template-columns: 246px 256px 290px;*/
+	grid-template-columns: 246px auto;
+	grid-template-rows: 130px auto;
+	grid-gap: 6px;
+	grid-template-areas: "diceController bankView" "diceController scoresheet";
+	margin-top: 6px;
+}
+
+
+
+
+@media only screen and (max-width: 699px) and (min-width: 581px) {
+	#gridWrapper {
+		width: 100%;
+	}
+	#divBank,
+	#divScoresheet {
+		height: auto;
+	}
+}
+
+
+
+
+
+@media only screen and (max-width: 580px) {
+	#divDiceController {
+		height: auto;
+		margin-top: 0;
+	}
+	#divBankHeader {
+		height: auto;
+		width: auto;
+	}
+	#divBankHeader{
+		div {
+			margin-top: 10px;
+		}
+	}
+
+	#divBank {
+		display: grid;
+		grid-gap: 5px;
+		grid-template-columns: 80px 1fr 130px;
+		grid-template-rows: 1fr;
+		grid-template-areas: "bankHeader bankElement bankButton";
+		width: 100%;
+		height: 52px;
+	}
+	#gridWrapper {
+		width: 100%;
+		grid-template-columns: 180px auto;
+		grid-template-rows: 400px 52px;
+		grid-template-areas: "diceController scoresheet" "bankView bankView";
+	}
+}

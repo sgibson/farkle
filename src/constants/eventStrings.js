@@ -1,0 +1,7 @@
+export const EVENT_START = "EVENT_START";
+export const EVENT_ROLL = "EVENT_ROLL";
+export const EVENT_DIE_MOVED = "EVENT_DIE_MOVED";
+export const EVENT_FARKLE = "EVENT_FARKLE";
+export const EVENT_BANKED_SCORE = "EVENT_BANKED_SCORE";
+export const EVENT_GAME_OVER = "EVENT_GAME_OVER";
+export const EVENT_RESET = "EVENT_RESET";

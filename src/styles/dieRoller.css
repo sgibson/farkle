@@ -1,0 +1,50 @@
+.dieSaved, .dieUnlocked {
+	cursor: pointer;
+}
+
+.dieUnlocked {
+	padding-left: 6px;
+	transition: padding 0.15s ease-in;
+}
+
+.dieSaved {
+	padding-left: 100px;
+	transition: all 0.15s ease-out;
+}
+
+.dieLocked {
+	cursor: default;
+	opacity: 0.6;
+	padding-left: 100px;
+}
+
+.dieTray {
+	text-align: left;
+	margin-bottom: 2px;
+	border-radius: 4px;
+	height: 52px;
+	width: 160px;
+}
+
+.dieTrayLockedorSaved, .dieTrayUnlocked {
+	border-style: solid;
+	border-width: 2px;
+}
+
+.dieTrayLockedorSaved {
+	border-top-color: #313131;
+	border-right-color: #555;
+	border-bottom-color: #777;
+	border-left-color: #313131;
+	background: url("../img/locked.png") no-repeat center;
+	transition: all 0.15s ease-out;
+}
+
+.dieTrayUnlocked {
+	border-top-color: #777;
+	border-right-color: #313131;
+	border-bottom-color: #313131;
+	border-left-color: #555;
+	background: url("../img/unlocked.png") no-repeat center;
+	transition: all 0.15s ease-in;
+}

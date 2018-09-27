@@ -1,0 +1,18 @@
+#scoresheet {
+  font-family: 'Kalam', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #scoresheet h3 {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0px;
+    padding: 6px;
+    white-space: nowrap; }
+  #scoresheet h2 {
+    color: #888;
+    font-size: 1.2em;
+    font-weight: 800; }
+  #scoresheet .smallFont {
+    font-size: 0.75em !important;
+    font-weight: 400; }

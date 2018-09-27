@@ -1,0 +1,19 @@
+#tableScoresheet h2 {
+  margin: 0;
+  padding: 6px; }
+
+#tableScoresheet .trScoresheetHeader th {
+  color: #666;
+  border-bottom: 3px solid #555; }
+
+#tableScoresheet .trScoresheetFooter th {
+  color: #666;
+  border-top: 3px solid #555; }
+
+#tableScoresheet .tdScoresheetLeft {
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333; }
+
+#tableScoresheet .tdScoresheetRight {
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333; }

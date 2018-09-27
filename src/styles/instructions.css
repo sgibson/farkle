@@ -1,0 +1,81 @@
+#divInstructions {
+	font-family: 'Kalam', cursive;
+	text-align: left;
+	display: grid;
+	border: 2px solid #333;
+	border-radius: 4px;
+	background-color: rgba(40,40,40, 0.5);
+	padding: 4px;
+	grid-gap: 6px;
+	grid-template-columns: 236px auto;
+	grid-template-areas: 
+		"howToPlay rules"
+		"scoring scoring";
+	margin-top: 6px;
+	text-shadow: 1px 1px 3px #000;
+}
+
+#divHowToPlay { grid-area: howToPlay; }
+#divRules { grid-area: rules; }
+
+
+.divScoreListing1 {  grid-area: one;  }
+.divScoreListing5 {  grid-area: five;  }
+.divScoreListing3K {  grid-area: threeK;  }
+.divScoreListing4K {  grid-area: fourK;  }
+.divScoreListing5K {  grid-area: fiveK;  }
+.divScoreListing6K {  grid-area: sixK;  }
+.divScoreListingStr {  grid-area: str;  }
+.divScoreListing2_3 {  grid-area: twoThree;  }
+.divScoreListing3_2 {  grid-area: threeTwo;  }
+
+
+
+
+#divScoring {
+	display: grid;
+	grid-gap: 6px;
+	grid-area: scoring;
+	grid-template-columns: 1fr 1fr 1fr;
+	
+	grid-template-areas:
+		"one five threeTwo"
+		"threeK threeK threeK"
+		"fourK fiveK sixK"
+		"str twoThree twoThree";
+		
+}
+
+
+
+@media only screen and (max-width: 800px) /* and (min-width: 570px) */ 
+{
+
+
+}
+
+@media only screen and (max-width: 580px) {
+	#divInstructions {
+		grid-template-columns: 100%;
+		grid-template-areas: "howToPlay" 
+							 "rules"
+							 "scoring";
+	}	
+
+	#divScoring {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"one"
+			"five"
+			"threeTwo"
+			"threeK"
+			"fourK"
+			"fiveK"
+			"sixK"
+			"str"
+			"twoThree";
+	}
+	
+}
+
+
