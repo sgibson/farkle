@@ -11,14 +11,10 @@
 /build
 
 # misc
-notes/
-deprecated/
-__sourceImages/
-.vscode/
-*.code-workspace
+/notes
 *.txt
 *.svn
-.svn/
+/.svn
 Readme.md
 Thumbs.db
 .DS_Store
